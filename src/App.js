@@ -12,6 +12,7 @@ import About from './Admin/User/About';
 import Footer from './Admin/Layouts/Footer';
 import Post from './Admin/Posts/Post';
 import PostData from './Admin/Posts/PostData';
+import { Counter } from './Admin/redux/Counter';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             </Route>
             <Route path='/post' element={<Post />} />
             <Route path='/post/postdata/:id' element={<PostData />} />
+            <Route path='/counter' element={<Counter/>} />
           </Routes>
         </main>
         <Footer />

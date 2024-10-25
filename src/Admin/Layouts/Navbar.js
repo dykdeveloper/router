@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 export default function Navbar() {
+    const count = useSelector((a)=>a.counter.value)
     return (
         <>
             <nav className="navbar navbar-expand navbar-light navbar-bg">
@@ -42,7 +44,7 @@ export default function Navbar() {
                         <li className="nav-item">
                             <a className="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
                                 <img src="img/avatars/avatar.jpg" className="avatar img-fluid rounded me-1" alt="Charles Hall" />
-                                <span className="text-dark">Charles Hall</span>
+                                <span className="text-dark">count: {count}</span>
                             </a>
                             <div className="dropdown-menu dropdown-menu-end">
                                 <a className="dropdown-item" href="pages-profile.html">
